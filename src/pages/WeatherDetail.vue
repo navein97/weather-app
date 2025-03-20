@@ -163,13 +163,13 @@ const getWeatherIcon = (condition: string) => {
   switch (condition.toLowerCase()) {
     case 'rain':
     case 'drizzle':
-      return '/src/assets/images/rain.png'
+      return '/images/rain.png'
     case 'clear':
-      return '/src/assets/images/sun.png'
+      return '/images/sun.png'
     case 'clouds':
-      return '/src/assets/images/sun.png'
+      return '/images/sun.png'
     default:
-      return '/src/assets/images/sun.png'
+      return '/images/sun.png'
   }
 }
 
