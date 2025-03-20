@@ -1,16 +1,19 @@
 <template>
   <div class="profile">
     <header>
-      <img :src="'/src/assets/icons/back-icon.svg'" alt="Back" class="back-icon" @click="goBack" />
+      <div class="back-button" @click="goBack">
+        <img src="/icons/back-icon.svg" alt="Back" />
+      </div>
       <h1>Edit Profile</h1>
+      <div class="placeholder"></div>
     </header>
 
     <div class="profile-content">
       <div class="avatar-container">
         <div class="avatar-wrapper">
-          <img :src="'/src/assets/images/default-avatar.png'" alt="Profile" class="avatar" />
+          <img :src="'/images/default-avatar.png'" alt="Profile" class="avatar" />
           <div v-if="isEditing" class="edit-icon-overlay">
-            <img :src="'/src/assets/icons/edit-icon.svg'" alt="Edit" class="edit-icon" />
+            <img :src="'/icons/edit-icon.svg'" alt="Edit" class="edit-icon" />
           </div>
         </div>
       </div>
@@ -185,8 +188,28 @@ onMounted(() => {
 </script>
 
 <style scoped>
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
 h1 {
   color: #000000;
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+  font-size: 24px;
 }
 
 .avatar-wrapper {
@@ -202,14 +225,14 @@ h1 {
 
 .edit-icon-overlay {
   position: absolute;
-  right: -4px;  /* Adjust position to slightly overlap */
+  right: -4px; /* Adjust position to slightly overlap */
   bottom: -4px;
   background: white;
   border-radius: 50%;
-  width: 32px;  /* Fixed width and height for perfect circle */
+  width: 32px; /* Fixed width and height for perfect circle */
   height: 32px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  display: flex;  /* Center the icon */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex; /* Center the icon */
   align-items: center;
   justify-content: center;
 }

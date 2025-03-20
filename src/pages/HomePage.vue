@@ -149,7 +149,7 @@ onUnmounted(() => {
       <h1 v-if="!showSuggestions">Weather</h1>
       <img
         v-if="!showSuggestions"
-        :src="'/src/assets/images/profile-icon.svg'"
+        :src="'/images/profile-icon.svg'"
         alt="Profile"
         class="profile-icon"
         @click="navigateToProfile"
@@ -158,7 +158,7 @@ onUnmounted(() => {
 
     <div class="search-container">
       <div class="search-wrapper">
-        <img :src="'/src/assets/icons/search-icon.svg'" alt="Search" class="search-icon" />
+        <img :src="'/icons/search-icon.svg'" alt="Search" class="search-icon" />
         <input
           type="text"
           placeholder="Search for a city or airport"
@@ -351,7 +351,7 @@ h1 {
 }
 
 .weather-card {
-  background-image: url('/src/assets/images/day.png');
+  background-image: url('/images/day.png');
   background-size: cover;
   background-position: center;
   color: white;

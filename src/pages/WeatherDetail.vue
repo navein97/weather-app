@@ -18,7 +18,7 @@
     <!-- Header -->
     <header class="header">
       <div class="back-button" @click="goBack">
-        <img src="/src/assets/icons/back-icon.svg" alt="Back" />
+        <img src="/icons/back-icon.svg" alt="Back" />
       </div>
       <h1>{{ cityName }}</h1>
       <button class="action-button" @click="handleActionButton" :disabled="loading">
@@ -158,7 +158,7 @@ const loadWeatherData = async () => {
 }
 
 const getWeatherIcon = (condition: string) => {
-  if (!condition) return '/src/assets/images/sun.png'
+  if (!condition) return '/images/sun.png'
 
   switch (condition.toLowerCase()) {
     case 'rain':
